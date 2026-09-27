@@ -13,6 +13,22 @@ a{text-decoration:none;color:inherit}.wrap{width:min(1120px,calc(100% - 32px));m
 section{padding:76px 0}.title{font-size:clamp(36px,5vw,56px);margin:8px 0 16px}.sub{color:var(--muted);line-height:1.75;max-width:760px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}.card{background:#fff;border:1px solid #76173012;border-radius:24px;padding:26px;box-shadow:0 10px 34px #7617300e}.card h3{font-family:Georgia,serif;color:var(--vinho);font-size:24px;margin:0 0 10px}.card p{color:var(--muted);line-height:1.65}.program{background:#fff7f5}.timeline{display:grid;gap:14px;margin-top:32px}.item{display:grid;grid-template-columns:140px 1fr;gap:18px;background:#fff;border:1px solid #76173012;border-radius:20px;padding:20px}.time{font-weight:900;color:var(--vinho)}.item p{margin:4px 0 0;color:var(--muted);line-height:1.6}.people{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}.person{background:linear-gradient(145deg,#fff,#fff2ef);border:1px solid #76173012;border-radius:24px;padding:24px}.role{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:#a12c4e;font-weight:900}.person strong{display:block;font-family:Georgia,serif;color:var(--vinho);font-size:27px;margin-top:6px}
 .register{background:linear-gradient(135deg,#6f152d,#a72549);color:#fff}.register .title{color:#fff}.reggrid{display:grid;grid-template-columns:1fr .9fr;gap:38px;align-items:start}.form{background:#fff;border-radius:28px;padding:28px;color:var(--texto);display:grid;gap:13px}.field{display:grid;gap:6px}.field label{font-size:13px;font-weight:850}.field input,.field textarea{border:1px solid #eadbe0;border-radius:14px;padding:13px 14px}.note{font-size:12px;color:#88717a}.success{display:none;padding:14px;border-radius:14px;background:#fff1f4;color:var(--vinho);border:1px solid #efcad3}.success.show{display:block}footer{background:#34131f;color:#f3e2e7;padding:38px 0}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.foot small{color:#cdb9c0}
 @media(max-width:880px){.grid,.reggrid{grid-template-columns:1fr}.cards,.people{grid-template-columns:1fr}.item{grid-template-columns:1fr}.poster{max-width:390px;margin:auto}}
+
+.inviteOverlay{position:fixed;inset:0;z-index:100;background:rgba(43,13,24,.82);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:18px;overflow:auto}
+.inviteOverlay.show{display:flex}.inviteModal{width:min(760px,100%);background:#fffaf6;border-radius:28px;padding:22px;box-shadow:0 30px 100px rgba(0,0,0,.28)}
+.inviteTop{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}.inviteTop h3{margin:0;font-family:Georgia,serif;color:var(--vinho);font-size:26px}.inviteClose{border:0;background:#f6e9ed;color:var(--vinho);width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer}
+.ticket{position:relative;overflow:hidden;background:linear-gradient(145deg,#fffdf9,#fff1f4);border:1px solid rgba(118,23,48,.12);border-radius:28px;padding:34px;box-shadow:0 18px 55px rgba(118,23,48,.12)}
+.ticket:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-90px;top:-110px;background:rgba(247,200,209,.45)}
+.ticketHead{position:relative;display:flex;justify-content:space-between;gap:22px;align-items:flex-start;border-bottom:1px dashed rgba(118,23,48,.22);padding-bottom:20px}
+.ticketBrand{font-family:Georgia,serif;color:var(--vinho);font-size:22px;font-weight:700}.ticketEvent{font-family:Georgia,serif;color:var(--vinho);font-size:36px;line-height:1;margin:8px 0 4px}.ticketEvent em{display:block;color:var(--vermelho);font-family:cursive;font-size:42px;font-weight:500}
+.ticketBadge{background:linear-gradient(135deg,var(--vinho),var(--vermelho));color:#fff;padding:9px 13px;border-radius:999px;font-size:12px;font-weight:900;white-space:nowrap}
+.ticketBody{position:relative;display:grid;grid-template-columns:1fr 170px;gap:28px;align-items:center;padding-top:24px}
+.congrats{color:#9b2448;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:12px}.guestName{font-family:Georgia,serif;color:var(--vinho);font-size:34px;margin:8px 0 16px}.ticketInfo{display:grid;grid-template-columns:1fr 1fr;gap:12px}.infoBox{background:#fff;border:1px solid rgba(118,23,48,.09);border-radius:16px;padding:13px}.infoBox small{display:block;color:#9a7b85;font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}.infoBox strong{font-size:14px;color:#4b2833;word-break:break-word}
+.qrWrap{text-align:center}.qrBox{width:160px;height:160px;margin:auto;background:#fff;border-radius:18px;padding:10px;border:1px solid rgba(118,23,48,.12);display:grid;place-items:center}.qrBox img,.qrBox canvas{max-width:100%;height:auto}.inviteCode{margin-top:9px;font-size:11px;color:#7c626b;font-weight:800;letter-spacing:.08em}
+.ticketFoot{position:relative;margin-top:20px;padding-top:16px;border-top:1px dashed rgba(118,23,48,.22);display:flex;justify-content:space-between;gap:16px;color:#785f68;font-size:12px;line-height:1.5}
+.inviteActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.inviteActions .btn{flex:1;min-width:180px}.secondaryBtn{background:#fff;border:1px solid rgba(118,23,48,.16);color:var(--vinho)}
+@media(max-width:680px){.ticket{padding:22px}.ticketHead{display:block}.ticketBadge{display:inline-flex;margin-top:12px}.ticketBody{grid-template-columns:1fr}.ticketInfo{grid-template-columns:1fr}.ticketEvent{font-size:31px}.guestName{font-size:29px}.ticketFoot{display:block}.qrWrap{margin-top:4px}}
+@media print{body *{visibility:hidden!important}.inviteOverlay,.inviteOverlay *{visibility:visible!important}.inviteOverlay{position:absolute!important;inset:0!important;background:#fff!important;padding:0!important;display:block!important}.inviteModal{box-shadow:none!important;width:100%!important;padding:0!important}.inviteTop,.inviteActions{display:none!important}.ticket{box-shadow:none!important;border:1px solid #ddd!important;margin:0!important}}
 </style>
 </head>
 <body>
@@ -28,8 +44,122 @@ section{padding:76px 0}.title{font-size:clamp(36px,5vw,56px);margin:8px 0 16px}.
 
 <section class="register" id="inscricao"><div class="wrap reggrid"><div><span class="eyebrow" style="color:#f7c7d1">Inscrição gratuita</span><h2 class="title">Quero participar do Mulheres que Movem.</h2><p style="color:#f7dfe6;line-height:1.75">Preencha seus dados para registrar seu interesse. Data, horário, local e programação final serão divulgados depois.</p><p style="color:#f7dfe6"><strong>Valor:</strong> gratuito<br><strong>Mês:</strong> novembro de 2026<br><strong>Local:</strong> a confirmar</p></div><form class="form" id="form"><div class="field"><label>Nome completo</label><input id="name" required></div><div class="field"><label>WhatsApp</label><input id="phone" required placeholder="(12) 99999-9999"></div><div class="field"><label>E-mail</label><input id="email" type="email" required></div><div class="field"><label>Cidade</label><input id="city"></div><div class="field"><label>O que você gostaria de viver nesse encontro?</label><textarea id="message" rows="3"></textarea></div><button class="btn primary" type="submit">Registrar interesse gratuitamente</button><div class="success" id="success"></div><p class="note">Nesta versão inicial, o cadastro fica salvo apenas neste dispositivo. A próxima etapa será conectar tudo ao banco oficial do evento.</p></form></div></section>
 </main>
+<div class="inviteOverlay" id="inviteOverlay" aria-hidden="true">
+  <div class="inviteModal">
+    <div class="inviteTop">
+      <h3>Seu convite está pronto 🌸</h3>
+      <button class="inviteClose" type="button" onclick="closeInvite()" aria-label="Fechar">×</button>
+    </div>
+    <div class="ticket" id="ticketCard">
+      <div class="ticketHead">
+        <div>
+          <div class="ticketBrand">Conexão Elas</div>
+          <div class="ticketEvent">Mulheres que <em>Movem</em></div>
+        </div>
+        <div class="ticketBadge">CONVITE GRATUITO</div>
+      </div>
+      <div class="ticketBody">
+        <div>
+          <div class="congrats">Parabéns, sua participação foi registrada!</div>
+          <div class="guestName" id="inviteName">Convidada</div>
+          <div class="ticketInfo">
+            <div class="infoBox"><small>Evento</small><strong>Mulheres que Movem</strong></div>
+            <div class="infoBox"><small>Quando</small><strong>Novembro de 2026</strong></div>
+            <div class="infoBox"><small>Local</small><strong>Campos do Jordão • SP</strong></div>
+            <div class="infoBox"><small>Status</small><strong>Inscrição gratuita</strong></div>
+            <div class="infoBox"><small>E-mail</small><strong id="inviteEmail">—</strong></div>
+            <div class="infoBox"><small>WhatsApp</small><strong id="invitePhone">—</strong></div>
+          </div>
+        </div>
+        <div class="qrWrap">
+          <div class="qrBox" id="qrCode"></div>
+          <div class="inviteCode" id="inviteCode">CNX-000000</div>
+        </div>
+      </div>
+      <div class="ticketFoot">
+        <div>Guarde este convite no celular ou imprima para levar no dia do evento.</div>
+        <div>Fundador Raphael Bueno • Embaixadora Josyene Freitas</div>
+      </div>
+    </div>
+    <div class="inviteActions">
+      <button class="btn primary" type="button" onclick="downloadInvitePng()">Salvar convite</button>
+      <button class="btn secondaryBtn" type="button" onclick="downloadInvitePdf()">Salvar em PDF</button>
+      <button class="btn secondaryBtn" type="button" onclick="window.print()">Imprimir</button>
+    </div>
+  </div>
+</div>
 <footer><div class="wrap foot"><strong>Conexão Elas</strong><small>Mulheres que Movem • Novembro 2026</small><small>Fundado por Raphael Bueno • Embaixadora Josyene Freitas</small></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
-document.getElementById("form").addEventListener("submit",function(e){e.preventDefault();const item={event:"Mulheres que Movem",name:name.value,phone:phone.value,email:email.value,city:city.value,message:message.value,createdAt:new Date().toISOString()};const saved=JSON.parse(localStorage.getItem("conexaoElasRegistrations")||"[]");saved.push(item);localStorage.setItem("conexaoElasRegistrations",JSON.stringify(saved));success.textContent="Interesse registrado neste dispositivo.";success.classList.add("show");this.reset();});
+let currentInvite=null;
+function makeInviteCode(){
+  const a=Date.now().toString(36).toUpperCase().slice(-5);
+  const b=Math.random().toString(36).toUpperCase().slice(2,6);
+  return "CNX-"+a+"-"+b;
+}
+function openInvite(item){
+  currentInvite=item;
+  document.getElementById("inviteName").textContent=item.name;
+  document.getElementById("inviteEmail").textContent=item.email;
+  document.getElementById("invitePhone").textContent=item.phone;
+  document.getElementById("inviteCode").textContent=item.inviteCode;
+  const qr=document.getElementById("qrCode");
+  qr.innerHTML="";
+  new QRCode(qr,{text:JSON.stringify({event:"Mulheres que Movem",code:item.inviteCode,name:item.name}),width:140,height:140,colorDark:"#761730",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H});
+  const overlay=document.getElementById("inviteOverlay");
+  overlay.classList.add("show");
+  overlay.setAttribute("aria-hidden","false");
+}
+function closeInvite(){
+  const overlay=document.getElementById("inviteOverlay");
+  overlay.classList.remove("show");
+  overlay.setAttribute("aria-hidden","true");
+}
+async function captureTicket(){
+  return await html2canvas(document.getElementById("ticketCard"),{scale:2,backgroundColor:"#fffaf6",useCORS:true});
+}
+async function downloadInvitePng(){
+  const canvas=await captureTicket();
+  const link=document.createElement("a");
+  const safe=(currentInvite?.name||"convite").replace(/[^a-zA-Z0-9À-ÿ_-]+/g,"-");
+  link.download="Convite-Mulheres-que-Movem-"+safe+".png";
+  link.href=canvas.toDataURL("image/png");
+  link.click();
+}
+async function downloadInvitePdf(){
+  const canvas=await captureTicket();
+  const img=canvas.toDataURL("image/png");
+  const {jsPDF}=window.jspdf;
+  const pdf=new jsPDF({orientation:"landscape",unit:"mm",format:"a4"});
+  const pageW=pdf.internal.pageSize.getWidth(),pageH=pdf.internal.pageSize.getHeight();
+  const ratio=Math.min((pageW-16)/canvas.width,(pageH-16)/canvas.height);
+  const w=canvas.width*ratio,h=canvas.height*ratio;
+  pdf.addImage(img,"PNG",(pageW-w)/2,(pageH-h)/2,w,h);
+  const safe=(currentInvite?.name||"convite").replace(/[^a-zA-Z0-9À-ÿ_-]+/g,"-");
+  pdf.save("Convite-Mulheres-que-Movem-"+safe+".pdf");
+}
+document.getElementById("inviteOverlay").addEventListener("click",e=>{if(e.target.id==="inviteOverlay")closeInvite()});
+document.getElementById("form").addEventListener("submit",function(e){
+  e.preventDefault();
+  const item={
+    event:"Mulheres que Movem",
+    name:document.getElementById("name").value.trim(),
+    phone:document.getElementById("phone").value.trim(),
+    email:document.getElementById("email").value.trim(),
+    city:document.getElementById("city").value.trim(),
+    message:document.getElementById("message").value.trim(),
+    inviteCode:makeInviteCode(),
+    createdAt:new Date().toISOString()
+  };
+  const saved=JSON.parse(localStorage.getItem("conexaoElasRegistrations")||"[]");
+  saved.push(item);
+  localStorage.setItem("conexaoElasRegistrations",JSON.stringify(saved));
+  success.textContent="Inscrição concluída. Seu convite digital foi gerado!";
+  success.classList.add("show");
+  openInvite(item);
+  this.reset();
+});
 </script>
 </body></html>
